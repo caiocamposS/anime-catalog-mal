@@ -1,5 +1,10 @@
 {
   "devDependencies": {
-    "prisma": "^6.8.2"
+    "concurrently": "^9.1.2"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && node server.js",
+    "client": "cd client && npm run dev"
   }
 }
